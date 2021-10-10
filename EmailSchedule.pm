@@ -38,7 +38,7 @@ sub List_and_store_email_schedule{
                on cpi.cust_id = ci.cust_id	
                left join product_email_configs pec
                on cpi.prod_id = pec.prod_id
-               where pec.days_after_activation is not null)				   
+               where pec.days_after_activation is not null) order by EmailDate			   
 	           ";
 	my $dbObject = new Database();
     my $dbh = $dbObject->connect()
